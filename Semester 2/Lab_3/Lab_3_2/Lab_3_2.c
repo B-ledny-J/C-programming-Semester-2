@@ -72,6 +72,6 @@ int main()
         printf("Перше число є мінімальним! Розрахунок неможливий!\n");
         return 1;
     }
-    else printf("Сума елементів масиву с непарними індексами, що знаходяться до мінімального елемента: %d\n", oddSumBeforeMinimal(numberArr, minimalNumber));
+    else printf("Сума елементів масиву с непарними індексами, що знаходяться до мінімального елемента: %d\n", oddSumBeforeMinimal(numberArr, minimalNumberIndex));
     return 0;
 }

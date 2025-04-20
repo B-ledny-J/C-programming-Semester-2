@@ -30,17 +30,18 @@ int minimalNumberIndexFind(int arr[], unsigned int size)
 
 int oddSumBeforeMinimal(int arr[], int min)
 {
-    int sum = arr[0];
-    for (int i  = 2; i < min; i += 2) sum += arr[i];
+    int sum = 0;
+    for (int i  = 0; i < min; i += 2) sum += arr[i];
     return sum;
 }
 
-void temp_writeDown(int arr[], unsigned int size)
+void writeArray(int arr[], unsigned int size)
 {
     for (int i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
     }
+    printf("\n");
 }
 
 int main()
@@ -64,9 +65,9 @@ int main()
         printf("Помилка: Введено інше число!\n");
         return 1;
     }
-    temp_writeDown(numberArr, N);
+    printf("Вигляд введеноного масива: ");
+    writeArray(numberArr, N);
     int minimalNumberIndex = minimalNumberIndexFind(numberArr, N);
-    printf("%d", minimalNumberIndex);
     if (minimalNumberIndex == 0)
     {
         printf("Перше число є мінімальним! Розрахунок неможливий!\n");

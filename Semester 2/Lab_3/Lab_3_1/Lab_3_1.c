@@ -31,7 +31,7 @@ int main()
     if (check_repeated_digits(n))
     {
         count_repeated_digits(n);
-        printf("Є цифри, що повторюються\n");
+        printf("Є цифри, що повторюються:\n");
         write_repeated_digits();
     }
     else

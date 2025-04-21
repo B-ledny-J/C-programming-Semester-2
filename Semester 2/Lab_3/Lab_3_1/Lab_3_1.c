@@ -2,18 +2,7 @@
 
 int digit_seen_counted[10] = {0};
 
-int check_repeated_digits(long n);
-
-int count_repeated_digits(long n)
-{
-    int digit;
-    while (n > 0) {
-        digit = n % 10;
-        digit_seen_counted[digit] += 1;
-        n /= 10;
-    }
-    return n;
-}
+int check_and_count_repeated_digits(long n);
 
 void write_repeated_digits()
 {
@@ -28,9 +17,8 @@ int main()
     long n;
     printf("Введіть число: ");
     scanf("%ld", &n);
-    if (check_repeated_digits(n))
+    if (check_and_count_repeated_digits(n))
     {
-        count_repeated_digits(n);
         printf("Є цифри, що повторюються:\n");
         write_repeated_digits();
     }
@@ -39,16 +27,16 @@ int main()
     return 0;
 }
 
-int check_repeated_digits(long n)
+int check_and_count_repeated_digits(long n)
 {
-    int digit_seen[10] = {0};
     int digit;
+    int isRepeated = 0;
+    if (n < 0) n *= -1;
     while (n > 0) {
         digit = n % 10;
-        if (digit_seen[digit])
-            break;
-        digit_seen[digit] = 1;
+        if (digit_seen_counted[digit])  isRepeated = 1;
+        digit_seen_counted[digit] += 1;
         n /= 10;
     }
-    return n;
+    return isRepeated;
 }

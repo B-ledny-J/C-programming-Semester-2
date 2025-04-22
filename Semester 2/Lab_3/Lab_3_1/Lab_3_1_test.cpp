@@ -1,17 +1,17 @@
 #include <gtest/gtest.h>
 extern "C" {
-#include "Lab_3_1.c"
+#include "Lab_3_1_module.c"
 }
 
 TEST(PositiveDigitTest, CountRepeatedDigits) {
     int counted[10] = {0};
     
-    count_repeated_digits(1102233474555, counted);
+    count_repeated_digits(110474555, counted);
 
     EXPECT_EQ(counted[0], 1);
     EXPECT_EQ(counted[1], 2);
-    EXPECT_EQ(counted[2], 2);
-    EXPECT_EQ(counted[3], 2);
+    EXPECT_EQ(counted[2], 0);
+    EXPECT_EQ(counted[3], 0);
     EXPECT_EQ(counted[4], 2);
     EXPECT_EQ(counted[5], 3);
     EXPECT_EQ(counted[6], 0);

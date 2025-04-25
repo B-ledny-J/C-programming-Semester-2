@@ -1,3 +1,12 @@
+/*
+* @file Lab_3_3_module.c
+* @author Дарчук Г.С., 515i
+* @date 24.02.2025
+* @brief Лабораторна робота №3, варіант 22
+*
+* Використання масивів. Завдання 3
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -45,4 +54,10 @@ int determinantFinder(int arr[7][7])
     determinant -= arr[1][4] * (arr[2][3] * arr[3][5] - arr[2][5] * arr[3][3]);
     determinant += arr[1][5] * (arr[2][3] * arr[3][4] - arr[2][4] * arr[3][3]);
     return determinant;
+}
+
+void writeData(int sum, int determinant)
+{
+    printf("Сума виділених елементів матриці: %d\n", sum);
+    printf("Визначник виділеної підматриці 3*3: %d\n", determinant);
 }

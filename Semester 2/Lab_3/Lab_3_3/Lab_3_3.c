@@ -1,10 +1,10 @@
 /*
-* @file appartmentInfo.h
+* @file Lab_3_3.c
 * @author Дарчук Г.С., 515i
-* @date 22.02.2025
-* @brief Лабораторна робота №1, варіант 22
+* @date 24.02.2025
+* @brief Лабораторна робота №3, варіант 22
 *
-* Розгалуження та вибір. Завдання 3
+* Використання масивів. Завдання 3
 */
 
 #include <stdio.h>
@@ -25,7 +25,6 @@ int main()
         return 1;
     }
     writeArray(matrix);
-    printf("Сума виділених елементів матриці: %d\n", sumOfSelected(matrix));
-    printf("Визначник виділеної підматриці 3*3: %d\n", determinantFinder(matrix));
+    writeData(sumOfSelected(matrix), determinantFinder(matrix));
     return 0;
 }

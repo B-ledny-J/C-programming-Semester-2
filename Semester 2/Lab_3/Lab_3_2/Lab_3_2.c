@@ -1,3 +1,13 @@
+/*
+* @file Lab_3_1.c
+* @author Дарчук Г.С., 515i
+* @date 24.04.2025
+* @brief Лабораторна робота №3, варіант 22
+*
+* Використання масивів. Завдання 2
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -31,8 +41,14 @@ int minimalNumberIndexFind(int arr[], unsigned int size)
 int oddSumBeforeMinimal(int arr[], int min)
 {
     int sum = 0;
-    for (int i  = 0; i < min; i += 2) sum += arr[i];
+    for (int i  = 1; i < min; i += 2) sum += arr[i];
     return sum;
+}
+
+void writeMinimalNumIndex(int arr[], int minIndex)
+{
+    printf("Мінімальне число массиву: %d\n", arr[minIndex]);
+    printf("Індекс мінімального числа масиву: %d\n", minIndex);
 }
 
 void writeArray(int arr[], unsigned int size)
@@ -68,9 +84,10 @@ int main()
     printf("Вигляд введеноного масива: ");
     writeArray(numberArr, N);
     int minimalNumberIndex = minimalNumberIndexFind(numberArr, N);
-    if (minimalNumberIndex == 0)
+    writeMinimalNumIndex(numberArr, minimalNumberIndex);
+    if (minimalNumberIndex == 0 || minimalNumberIndex == 1)
     {
-        printf("Перше число є мінімальним! Розрахунок неможливий!\n");
+        printf("Перше або число є мінімальним! Розрахунок неможливий!\n");
         return 1;
     }
     else printf("Сума елементів масиву с непарними індексами, що знаходяться до мінімального елемента: %d\n", oddSumBeforeMinimal(numberArr, minimalNumberIndex));

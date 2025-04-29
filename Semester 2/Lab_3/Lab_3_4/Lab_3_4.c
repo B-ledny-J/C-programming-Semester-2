@@ -1,3 +1,12 @@
+/*
+* @file Lab_3_4.c
+* @author Дарчук Г.С., 515i
+* @date 24.02.2025
+* @brief Лабораторна робота №3, варіант 22
+*
+* Використання масивів. Завдання 4
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -15,6 +24,15 @@ int any_three(int arr[NUM_SUITS][NUM_RANKS])
         count = 0;
     }
     return 0;
+}
+
+void  arrayToNull(int arr[NUM_SUITS][NUM_RANKS])
+{
+    for (int i = 0; i < NUM_SUITS; i++) {
+        for (int j = 0; j < NUM_RANKS; j++) {
+            arr[i][j] = 0;
+        }
+    }
 }
 
 int main()
@@ -44,15 +62,10 @@ int main()
             }
         }
         printf("\n");
-        printf("Чи є у гравця %d комбінація \"трійка\": ", i + 1);
-        if (any_three(player_hand)) printf("так\n");
-        else printf("ні\n");
+        if (any_three(player_hand)) printf("У гравця %d є комбінація \"трійка\"\n", i + 1);
+        else printf("У гравця %d немає комбінації \"трійка\"\n", i + 1);
         // обнулення масиву
-        for (int l = 0; l < NUM_SUITS; l++) {
-            for (int k = 0; k < NUM_RANKS; k++) {
-                player_hand[l][k] = 0;
-            }
-        }
+        arrayToNull(player_hand);
     }
     return 0;
 }

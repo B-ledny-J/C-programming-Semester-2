@@ -34,7 +34,10 @@ void write_by_random(int arr[], int N, int range)
 
 void writeArray(int arr[], int N)
 {
-    for (int i = 0; i < N; i++) printf("%d ", arr[i]);
+    for (int i = 0; i < N; i++)
+    {
+        printf("%d ", arr[i]);
+    }
     printf("\n");
 }
 

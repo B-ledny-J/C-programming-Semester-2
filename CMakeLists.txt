@@ -3,6 +3,11 @@ project(KAI_Labs)
 
 set(CMAKE_C_STANDARD 11)
 
+if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+    add_compile_options(-g)
+    add_compile_definitions(_DEBUG)
+endif()
+
 add_executable(Lab_3_1 "Semester 2/Lab_3/Lab_3_1/Lab_3_1.c" "Semester 2/Lab_3/Lab_3_1/Lab_3_1_module.c")
 add_executable(Lab_3_2 "Semester 2/Lab_3/Lab_3_2/Lab_3_2.c")
 add_executable(Lab_3_3 "Semester 2/Lab_3/Lab_3_3/Lab_3_3.c" "Semester 2/Lab_3/Lab_3_3/Lab_3_3_module.c")

@@ -12,5 +12,5 @@ TEST(automorphCheck, is_automorphic) {
 
 TEST(nearAutomorphFindCheck, near_automorphic) {
     EXPECT_EQ(near_automorphic(3), 1);
-    EXPECT_EQ(is_automorphic(7), 6);
+    EXPECT_EQ(near_automorphic(7), 6);
 }

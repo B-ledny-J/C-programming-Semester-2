@@ -23,11 +23,18 @@ add_executable(Lab_5_1_test "Semester 2/Lab_5/Lab_5_1/Lab_5_1_test.cpp")
 add_executable(Lab_5_2 "Semester 2/Lab_5/Lab_5_2/Lab_5_2.c")
 add_executable(Lab_5_3 "Semester 2/Lab_5/Lab_5_3/Lab_5_3.c")
 
+add_executable(Lab_6_1 "Semester 2/Lab_6/Lab_6_1/Lab_6_1.c")
+add_executable(Lab_6_2 "Semester 2/Lab_6/Lab_6_2/Lab_6_2.c")
+add_executable(Lab_6_2_test "Semester 2/Lab_6/Lab_6_2/Lab_6_2_test.cpp")
+add_executable(Lab_6_3 "Semester 2/Lab_6/Lab_6_3/Lab_6_3.c" "Semester 2/Lab_6/Lab_6_3/sds.c" "Semester 2/Lab_6/Lab_6_3/alloc.c")
+add_executable(Lab_6_4 "Semester 2/Lab_6/Lab_6_4/Lab_6_4.c" "Semester 2/Lab_6/Lab_6_4/sds.c" "Semester 2/Lab_6/Lab_6_4/alloc.c")
+
 add_executable(PerSiK "Semester 2/PerSiK 2025.2.c")
 
 add_executable(Temp_Shit "Semester 2/temp_shit/temp_main_shit.c")
 
 include(FetchContent)
+
 FetchContent_Declare(googletest
         GIT_REPOSITORY https://github.com/google/googletest.git
         GIT_TAG b514bdc898e2951020cbdca1304b75f5950d1f59)
@@ -36,6 +43,7 @@ FetchContent_MakeAvailable(googletest)
 target_link_libraries(Lab_3_1_test GTest::gtest_main)
 target_link_libraries(Lab_4_3_test GTest::gtest_main)
 target_link_libraries(Lab_5_1_test GTest::gtest_main)
+target_link_libraries(Lab_6_2_test GTest::gtest_main)
 
 enable_testing()
 
@@ -43,3 +51,4 @@ include(GoogleTest)
 gtest_discover_tests(Lab_3_1_test)
 gtest_discover_tests(Lab_4_3_test)
 gtest_discover_tests(Lab_5_1_test)
+gtest_discover_tests(Lab_6_2_test)

@@ -29,6 +29,8 @@ add_executable(Lab_6_2_test "Semester 2/Lab_6/Lab_6_2/Lab_6_2_test.cpp")
 add_executable(Lab_6_3 "Semester 2/Lab_6/Lab_6_3/Lab_6_3.c" "Semester 2/Lab_6/Lab_6_3/sds.c" "Semester 2/Lab_6/Lab_6_3/alloc.c")
 add_executable(Lab_6_4 "Semester 2/Lab_6/Lab_6_4/Lab_6_4.c" "Semester 2/Lab_6/Lab_6_4/sds.c" "Semester 2/Lab_6/Lab_6_4/alloc.c")
 
+add_executable(Lab_RGR "Semester 2/Lab_RGR/Lab_RGR.c")
+
 add_executable(PerSiK "Semester 2/PerSiK 2025.2.c")
 
 add_executable(Temp_Shit "Semester 2/temp_shit/temp_main_shit.c")
